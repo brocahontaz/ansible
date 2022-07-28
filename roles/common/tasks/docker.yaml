@@ -1,0 +1,11 @@
+---
+- name: Install dependencies
+  become: yes
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - lsb-release
+      - gnupg
+    state: latest
+    update_cache: true

@@ -1,0 +1,5 @@
+---
+# - name: Install prereqs
+
+- name: Download k3s
+  include_tasks: download.yaml

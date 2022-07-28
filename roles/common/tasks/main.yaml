@@ -1,0 +1,25 @@
+---
+- name: Install useful utils
+  become: yes
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    state: present
+    name:
+      - netcat
+      - htop
+      - dnsutils
+      - ncdu
+
+- name: apt upgrade
+  become: yes
+  apt:
+    upgrade: safe
+    cache_valid_time: 3600
+    update_cache: yes
+    state: present
+
+- name: Install docker
+  include_tasks: docker.yaml
+
+#- name: Install docker-compose
