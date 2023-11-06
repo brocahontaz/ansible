@@ -7,5 +7,7 @@
       - ca-certificates
       - lsb-release
       - gnupg
+      - docker.io
+      - docker-compose
     state: latest
     update_cache: true
