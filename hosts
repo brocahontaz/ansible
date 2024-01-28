@@ -1,7 +1,11 @@
-rooterserver
+fjallbark-0
+fjallbark-1
+fjallbark-2
 
 [master]
-rooterserver
+fjallbark-0
+fjallbark-1
+fjallbark-2
 
 [worker]
 
