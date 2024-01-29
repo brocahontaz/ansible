@@ -20,7 +20,7 @@
     update_cache: yes
     state: present
 
-- name: Install docker
-  include_tasks: docker.yaml
+#- name: Install docker
+#  include_tasks: docker.yaml
 
 #- name: Install docker-compose

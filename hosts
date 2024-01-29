@@ -1,14 +1,16 @@
-fjallbark-0
-fjallbark-1
-fjallbark-2
+service-host.home.local
 
-[master]
-fjallbark-0
-fjallbark-1
-fjallbark-2
+#fjallbark-0.home.local
+#fjallbark-1.home.local
+#fjallbark-2.home.local
 
-[worker]
+[docker_compose]
+service-host.home.local
 
-[k3s_cluster:children]
-master
-worker
+#[k8s_server]
+#fjallbark-0.home.local
+#fjallbark-1.home.local
+#fjallbark-2.home.local
+#
+#[k8s_cluster:children]
+#k8s_server
