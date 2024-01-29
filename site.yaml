@@ -6,7 +6,12 @@
   tags:
     - common
 
-
+- name: "Install docker & docker-compose"
+  hosts: docker_compose
+  roles:
+    - docker_compose/common
+  tags:
+    - docker_compose/common
 
 #- name: "Cluster"
 #  hosts: k8s_cluster
