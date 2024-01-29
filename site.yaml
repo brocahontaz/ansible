@@ -9,9 +9,9 @@
 - name: "Install docker & docker-compose"
   hosts: docker_compose
   roles:
-    - docker_compose/common
+    - docker_compose
   tags:
-    - docker_compose/common
+    - docker_compose
 
 #- name: "Cluster"
 #  hosts: k8s_cluster

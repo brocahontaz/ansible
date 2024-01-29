@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  haproxy:
+    image: haproxy:latest
+    container_name: haproxy
+    ports:
+      - "80:80"
+      - "6443:6443"
+      - "9345:9345"
+    volumes:
+      - ./haproxy/config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro

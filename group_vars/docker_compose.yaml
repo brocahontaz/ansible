@@ -1,2 +1,2 @@
-docker_version: 5:24.0.0-1~ubuntu.22.04~jammy
+docker_version: 5:25.0.0-1~ubuntu.22.04~jammy
 architecture: amd64

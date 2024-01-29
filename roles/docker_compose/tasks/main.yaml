@@ -1,0 +1,13 @@
+---
+- name: Include common tasks
+  include_tasks: ../common/tasks/main.yaml
+
+- name: Copy Docker Compose files
+  copy:
+    src: "{{ role_path }}/{{ inventory_hostname }}/"
+    dest: "./compose/"
+
+- name: Run Docker Compose
+  shell: docker compose up -d
+  args:
+    chdir: "./compose"

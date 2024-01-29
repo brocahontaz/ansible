@@ -8,7 +8,8 @@
       - lsb-release
       - gnupg
       - curl
-    state: latest
+      - python3-pip
+    state: present
     update_cache: true
 
 - name: Update apt packages
@@ -57,3 +58,17 @@
       - docker-buildx-plugin
       - docker-compose-plugin
     state: present
+    allow_downgrades: yes
+
+- name: Add current user to docker group
+  become: true
+  user:
+    name: "{{ansible_user_id}}"
+    groups: docker
+    append: yes  # Add the user to the group without removing from other groups
+
+- name: Restart Docker service
+  become: true
+  systemd:
+    name: docker
+    state: restarted
