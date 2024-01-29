@@ -1,0 +1,11 @@
+---
+- name: Prepare RKE2
+  include_tasks: ../common/tasks/main.yaml
+
+- name: Setup initial server
+  include_tasks: first_server.yaml
+  when: inventory_hostname in groups['k8s_servers'][0]
+
+- name: Setup other servers
+  include_tasks: other_servers.yaml
+  when: inventory_hostname in groups['k8s_servers'][1:]

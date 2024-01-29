@@ -1,0 +1,4 @@
+---
+- name: NetworkManager fix
+  include_tasks: networkmanager_fix.yaml
+

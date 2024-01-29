@@ -1,16 +1,16 @@
-service-host.home.local ansible_architecture=amd64
+service-host.home.local
 
-#fjallbark-0.home.local
-#fjallbark-1.home.local
-#fjallbark-2.home.local
+#k8s-0.home.local
+#k8s-1.home.local
+#k8s-2.home.local
 
 [docker_compose]
-service-host.home.local ansible_architecture=amd64
+service-host.home.local 
 
 #[k8s_server]
-#fjallbark-0.home.local
-#fjallbark-1.home.local
-#fjallbark-2.home.local
+#k8s-0.home.local
+#k8s-1.home.local
+#k8s-2.home.local
 #
 #[k8s_cluster:children]
 #k8s_server
