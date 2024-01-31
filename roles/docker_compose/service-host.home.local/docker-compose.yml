@@ -2,11 +2,26 @@ version: '3.8'
 
 services:
   haproxy:
-    image: haproxy:latest
     container_name: haproxy
+    hostname: haproxy
+    image: haproxy:latest
     ports:
       - "80:80"
       - "443:443"
       - "6443:6443"
     volumes:
       - ./haproxy/config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+
+  tailscale: 
+    container_name: tailscale 
+    hostname: tailscale
+    image: tailscale/tailscale:stable 
+    volumes: 
+      - ./tailscale:/var/lib
+      - /dev/net/tun:/dev/net/tun # Required for tailscale to work 
+    cap_add: # Required for tailscale to work 
+      - net_admin 
+      - sys_module 
+    command: tailscaled 
+    privileged: true 
+    restart: unless-stopped
