@@ -36,3 +36,4 @@ services:
      - "27015:27015/tcp"
     volumes:
      - ./factorio:/factorio
+    restart: unless-stopped
