@@ -11,6 +11,7 @@ services:
       - "6443:6443"
     volumes:
       - ./haproxy/config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    restart: unless-stopped
 
   tailscale: 
     container_name: tailscale 
@@ -25,3 +26,13 @@ services:
     command: tailscaled 
     privileged: true 
     restart: unless-stopped
+
+  factorio:
+    container_name: factorio
+    hostname: factorio
+    image: factoriotools/factorio:1.1.104
+    ports:
+     - "34197:34197/udp"
+     - "27015:27015/tcp"
+    volumes:
+     - ./factorio:/factorio
