@@ -20,3 +20,7 @@
 
 # Ignore code-workspaces
 *.code-workspace
+
+**/mods/*
+!**/mods/
+!**/mods/mod-list.json

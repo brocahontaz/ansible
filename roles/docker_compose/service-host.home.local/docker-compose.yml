@@ -30,7 +30,7 @@ services:
   factorio:
     container_name: factorio
     hostname: factorio
-    image: factoriotools/factorio:1.1.104
+    image: factoriotools/factorio:1.1.101
     ports:
      - "34197:34197/udp"
      - "27015:27015/tcp"
