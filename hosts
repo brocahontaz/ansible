@@ -1,11 +1,13 @@
 service-host.home.local
+public-host.home.local 
 
 #k8s-0.home.local
 #k8s-1.home.local
 #k8s-2.home.local
 
 [docker_compose]
-service-host.home.local 
+service-host.home.local
+public-host.home.local 
 
 #[k8s_server]
 #k8s-0.home.local

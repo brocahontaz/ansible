@@ -2,6 +2,10 @@ Host service-host.home.local
   User fjall
   IdentityFile ~/.ssh/home_ssh
 
+Host public-host.home.local
+  User fjall
+  IdentityFile ~/.ssh/home_ssh
+
 Host k8s-*.home.local
   User fjall
   IdentityFile ~/.ssh/home_ssh
